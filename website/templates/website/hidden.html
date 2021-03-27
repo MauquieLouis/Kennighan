@@ -1,0 +1,58 @@
+{% extends 'website/base.html' %}
+{% block content %}
+		<div class="col-12">
+		<div class="row"><h4>Kernighan <a href="{% url 'website:home' %}">&</a> Ritchie les biatchs surs</h4></div>
+		<div class="row" style="margin:20px"></div>
+		<div class="row">
+			<div class="col-12 offset-md-4 col-md-4" id="imgZone">
+				{% load static %}
+				<img class="imgOff"src="{% static 'website/img/Im1.jpg' %}" alt="Jul Jul Jul" style="height:500px; width:auto"/>
+				<img class="imgOn"src="{% static 'website/img/Im2-pS.jpg' %}" alt="Jul Jul Jul" style="height:500px; width:auto"/>
+			</div>
+		</div>
+		</div>
+		
+			
+		<style>
+			#imgZone{
+				position:relative;
+  				height:281px;
+				width:450px;
+				margin:0 auto;
+			}
+			#imgZone img{
+				position:absolute;
+				left:0;
+				-webkit-transition: opacity 1s ease-in-out;
+				-moz-transition: opacity 1s ease-in-out;
+				-o-transition: opacity 1s ease-in-out;
+				transition: opacity 1s ease-in-out;
+			}
+			#imgZone img.imgOn:hover{
+				opacity:0;
+			}
+			
+			/* #imgOff{
+				display:none;
+			}
+			#imgOff:hover{
+				display:inline-block;
+			} */
+			.redB
+			{
+				border: 1px solid red;
+			}
+			.blueB
+			{
+				border: 1px solid blue;
+			}
+			.greenB
+			{
+				border: 1px solid green;
+			}
+			.orangeB
+			{
+				border: 1px solid orange;
+			}
+		</style>
+{% endblock %}
